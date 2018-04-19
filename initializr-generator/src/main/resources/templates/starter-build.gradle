@@ -81,12 +81,14 @@ configurations {
 }
 {{/providedDependencies}}
 
+{{^buildPropertiesVersions.empty}}
 ext {
 	{{#buildPropertiesVersions}}
 	{{key}} = '{{value}}'
 {{/buildPropertiesVersions}}
 }
 
+{{/buildPropertiesVersions.empty}}
 dependencies {
 	asciidoctor "org.springframework.restdocs:spring-restdocs-asciidoctor:${springRestDocsVersion}"
 	{{#compileDependencies}}
