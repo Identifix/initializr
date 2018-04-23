@@ -81,14 +81,13 @@ configurations {
 }
 {{/providedDependencies}}
 
-{{^buildPropertiesVersions.empty}}
 ext {
 	{{#buildPropertiesVersions}}
 	{{key}} = '{{value}}'
 {{/buildPropertiesVersions}}
+	springRestDocsVersion = '2.0.0.RELEASE'
 }
 
-{{/buildPropertiesVersions.empty}}
 dependencies {
 	asciidoctor "org.springframework.restdocs:spring-restdocs-asciidoctor:${springRestDocsVersion}"
 	{{#compileDependencies}}
