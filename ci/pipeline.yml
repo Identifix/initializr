@@ -119,12 +119,14 @@ resource_types:
 resources:
 - name: initializr-service
   type: git
+  check_every: 5m
   source:
     uri: git@github.com:Identifix/initializr.git
     branch: master
     private_key: ((github.ssh_key))
 - name: concourse-ci-repo
   type: git
+  check_every: 5m
   source:
     uri: git@github.com:Identifix/concourse-ci.git
     branch: master
