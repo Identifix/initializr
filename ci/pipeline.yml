@@ -138,6 +138,7 @@ resources:
     artifact: com.identifix:initializr-service:jar
     username: ((artifact-repo.username))
     password: ((artifact-repo.password))
+    skip_cert_check: true
 - name: nexus-release
   type: maven-resource
   source:
@@ -145,6 +146,7 @@ resources:
     artifact: com.identifix:initializr-service:jar
     username: ((artifact-repo.username))
     password: ((artifact-repo.password))
+    skip_cert_check: true
 - name: version
   type: semver
   source:
